@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 40%;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 100;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #5600A7;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<h1 style="text-align: center;"><span style="color: #5600A7;">| Arm Control |</span></h1>
+
+<form action="TT1.php" method="post">
+
+<div class="slidecontainer">
+    <p>Engine 1:</p>
+  <Input type="range" min="0" max="180" value="0" class="slider" name="E1" onChange="rangeSlide(value)" onmousemove="rangeSlide(value)"></Input>
+            <span id="rangeValue">0</span> 
+    <p>Engine 2:</p>
+  <Input type="range" min="0" max="180" value="0" class="slider" name="E2" onChange="rangeSlide2(value)" onmousemove="rangeSlide2(value)"></Input>
+            <span id="rangeValue2">0</span>
+    <p>Engine 3:</p>
+  <Input type="range" min="0" max="180" value="0" class="slider" name="E3" onChange="rangeSlide3(value)" onmousemove="rangeSlide3(value)"></Input>
+              <span id="rangeValue3">0</span>
+    <p>Engine 4:</p>
+  <Input type="range" min="0" max="180" value="0" class="slider" name="E4" onChange="rangeSlide4(value)" onmousemove="rangeSlide4(value)"></Input>
+              <span id="rangeValue4">0</span>
+    <p>Engine 5:</p>
+  <Input type="range" min="0" max="180" value="0" class="slider" name="E5" onChange="rangeSlide5(value)" onmousemove="rangeSlide5(value)"></Input>
+              <span id="rangeValue5">0</span>
+    <p>Engine 6:</p>
+  <Input type="range" min="0" max="180" value="0" class="slider" name="E6" onChange="rangeSlide6(value)" onmousemove="rangeSlide6(value)"></Input>
+              <span id="rangeValue6">0</span>
+</div>
+    <p></p>
+
+
+<button class="button button1"onclick="alert('Your Work Have Been Saved !')" name="save">Save</button>
+<button class="button button2"onclick="alert('Arm Robot Have Been Running')" name="Run">Run</button>
+
+</form>
+
+    <script type="text/javascript">
+        function rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value;
+        }
+        function rangeSlide2(value) {
+            document.getElementById('rangeValue2').innerHTML = value;
+        }
+        function rangeSlide3(value) {
+            document.getElementById('rangeValue3').innerHTML = value;
+        }
+        function rangeSlide4(value) {
+            document.getElementById('rangeValue4').innerHTML = value;
+        }
+        function rangeSlide5(value) {
+            document.getElementById('rangeValue5').innerHTML = value;
+        }
+        function rangeSlide6(value) {
+            document.getElementById('rangeValue6').innerHTML = value;
+        }
+    </script> 
+
+
+
+
+</body>
+</html>
